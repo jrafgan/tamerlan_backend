@@ -15,8 +15,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-const port = 8003;
-
 mongoose.connect(config.dbUrl, config.mongoOptions).then(() => {
   app.use('/categories', categories);
   app.use('/messages', messages);
