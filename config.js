@@ -4,7 +4,7 @@ const rootPath = __dirname;
 module.exports = {
   rootPath,
   uploadPath: path.join(rootPath, 'public/uploads'),
-    dbUrl: process.env.dbUrl || "mongodb+srv://sofiya:ivtFq8EVC5pLcQh5@cluster0.d9xtu.mongodb.net/admin?retryWrites=true&w=majority",
+    dbUrl: process.env.dbUrl || "mongodb+srv://sofiya:ivtFq8EVC5pLcQh5@cluster0.d9xtu.mongodb.net/Cluster0?retryWrites=true&w=majority",
     mongoOptions: {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false},
   accessTokenLife: 3600, // время задается в сек
   refreshTokenLife: 36000

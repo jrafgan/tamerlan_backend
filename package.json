@@ -2,10 +2,16 @@
   "title": "agregator",
   "version": "1.0.0",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
   "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "dev": "NODE_ENV=development concurently \"npm run server\" \"npm run client\""
+  },
+  "author": "Maksat Duishenaliev <maksatovy@gmail.com>",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
